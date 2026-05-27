@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The BallyBaazi is a premium sports entertainment platform for cricket, IPL, football, fan reactions, podcasts, memes, and creator-led sports storytelling."
+    />
+    <meta name="theme-color" content="#0B0F1A" />
+    <meta property="og:title" content="The BallyBaazi | Sports Entertainment" />
+    <meta property="og:description" content="Where Sports Meets Entertainment. Pitch Badal Jaaye, Jazba Nahi." />
+    <meta property="og:image" content="public/images/hero-stadium.png" />
+    <title>The BallyBaazi | Sports Entertainment</title>
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="brand-mark">TB</div>
+      <p>Loading Match Energy</p>
+    </div>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="The BallyBaazi home">
+        <span class="brand-mark">TB</span>
+        <span>
+          <strong>The BallyBaazi</strong>
+          <small>Sports x Entertainment</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" aria-label="Toggle light mode">LT</button>
+        <button class="icon-button menu-toggle" aria-label="Open menu">M</button>
+      </div>
+    </header>
+
+    <aside class="mobile-menu" aria-hidden="true">
+      <button class="icon-button close-menu" aria-label="Close menu">X</button>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#content">Content</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </aside>
+
+    <section id="home" class="hero">
+      <img class="hero-bg" src="public/images/hero-stadium.png" alt="Cinematic sports stadium celebration" />
+      <div class="hero-overlay"></div>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>LIVE: India need 42 from 24</span>
+          <span>IPL Pulse: Powerplay intent up 18%</span>
+          <span>Fan poll: Who owns the death overs?</span>
+          <span>Football tonight: Derby watch party at 9 PM</span>
+          <span>New reel: Last-over chaos breakdown</span>
+          <span>LIVE: India need 42 from 24</span>
+          <span>IPL Pulse: Powerplay intent up 18%</span>
+          <span>Fan poll: Who owns the death overs?</span>
+          <span>Football tonight: Derby watch party at 9 PM</span>
+          <span>New reel: Last-over chaos breakdown</span>
+        </div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Live Sports Culture</p>
+          <h1>Where Sports Meets <span>Entertainment</span></h1>
+          <p class="hero-line">Pitch Badal Jaaye, Jazba Nahi.</p>
+          <div class="button-row">
+            <a class="btn primary" href="#content">PLAY Watch Latest Content</a>
+            <a class="btn ghost" href="#content">Explore Social Drops</a>
+          </div>
+        </div>
+
+        <div class="hero-dashboard reveal">
+          <article class="score-card float-a">
+            <small>BBZ Live</small>
+            <strong>IND 184/4</strong>
+            <span>Need 42 off 24</span>
+          </article>
+          <article class="score-card float-b">
+            <small>Fan Pulse</small>
+            <strong>92%</strong>
+            <span>calling it a thriller</span>
+          </article>
+          <div class="bat-graphic"></div>
+          <div class="hero-stats">
+            <div><strong class="counter" data-target="48.7">0</strong><span>K live fans</span></div>
+            <div><strong class="counter" data-target="1.8">0</strong><span>M watch hours</span></div>
+            <div><strong class="counter" data-target="740">0</strong><span>stories</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="about" class="section split">
+        <div class="media-panel reveal">
+          <img src="public/images/hero-stadium.png" alt="Sports broadcast atmosphere" />
+          <div>
+            <small>The Baazi Desk</small>
+            <h2>Creator-led match storytelling</h2>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">About The Brand</p>
+          <h2 class="section-title">Built for fans who live the game beyond the scoreboard.</h2>
+          <p class="section-copy">
+            The BallyBaazi is a sports entertainment company, digital sports media platform, and community-driven culture brand.
+            It blends creator-led storytelling, match analysis, fan reactions, memes, podcasts, and match-day emotion into one premium sports universe.
+          </p>
+          <div class="metric-grid">
+            <article><strong>420K+</strong><span>Subscribers</span></article>
+            <article><strong>310K+</strong><span>Instagram followers</span></article>
+            <article><strong>18M+</strong><span>Monthly reach</span></article>
+            <article><strong>1.2K+</strong><span>Match analyses</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="content" class="section">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Featured Content</p>
+            <h2 class="section-title">Latest drops from every corner of sports culture.</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Content filters">
+            <button class="active" data-filter="YouTube">YouTube</button>
+            <button data-filter="Instagram">Instagram</button>
+          </div>
+        </div>
+        <div class="content-grid">
+          <article class="content-card" data-platform="YouTube"><div>YT</div><small>YouTube Video</small><h3>Death overs decoded with wagon-wheel heat</h3><p>Long-form tactical breakdown</p></article>
+          <article class="content-card" data-platform="YouTube"><div>YT</div><small>YouTube Episode</small><h3>Powerplay Mayhem: why intent won the night</h3><p>12 min analysis</p></article>
+          <article class="content-card" data-platform="YouTube"><div>YT</div><small>YouTube Podcast</small><h3>The Baazi Room: trades, tantrums, takes</h3><p>Full episode</p></article>
+          <article class="content-card" data-platform="YouTube"><div>YT</div><small>YouTube Short</small><h3>60 seconds of match-day madness</h3><p>Vertical quick hit</p></article>
+          <article class="content-card" data-platform="Instagram"><div>IG</div><small>Instagram Reel</small><h3>Fans after the final over: pure cinema</h3><p>High-energy fan reaction</p></article>
+          <article class="content-card" data-platform="Instagram"><div>IG</div><small>Instagram Carousel</small><h3>Swing map: new ball plans that changed the innings</h3><p>Swipeable visual analysis</p></article>
+          <article class="content-card" data-platform="Instagram"><div>IG</div><small>Instagram Reel</small><h3>Street fan cam after the super over</h3><p>Match-day reaction cut</p></article>
+          <article class="content-card" data-platform="Instagram"><div>IG</div><small>Instagram Post</small><h3>Auction room rumours and retention heat</h3><p>Fast social update</p></article>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="center reveal">
+          <p class="eyebrow">Team</p>
+          <h2 class="section-title">The People Behind The Game</h2>
+        </div>
+        <div class="team-grid">
+          <article class="team-card reveal"><div>AM</div><small>Founder & Host</small><h3>Aarav Mehta</h3><p>Builds the big match storylines and keeps the community voice loud.</p></article>
+          <article class="team-card reveal"><div>SQ</div><small>Lead Analyst</small><h3>Sana Qureshi</h3><p>Turns chaos into clean tactical explainers for every kind of fan.</p></article>
+          <article class="team-card reveal"><div>KR</div><small>Reels Director</small><h3>Kabir Rao</h3><p>Cuts reactions, memes, and celebrations into high-tempo social hits.</p></article>
+          <article class="team-card reveal"><div>NS</div><small>Community Producer</small><h3>Niyati Shah</h3><p>Runs polls, fan rooms, watch parties, and creator collaborations.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="reveal">
+          <p class="eyebrow">Why The BallyBaazi</p>
+          <h2 class="section-title">Premium coverage with street-level fan energy.</h2>
+        </div>
+        <div class="why-grid">
+          <article class="reveal"><span>OP</span><h3>Authentic Opinions</h3><p>No bland studio talk. Sharp, fan-first takes with personality.</p></article>
+          <article class="reveal"><span>VL</span><h3>Viral Entertainment</h3><p>Reels, memes, reactions, and moments designed for the timeline.</p></article>
+          <article class="reveal"><span>24</span><h3>Daily Updates</h3><p>Fast match context across cricket, IPL, football, and pop culture.</p></article>
+          <article class="reveal"><span>ST</span><h3>Engaging Storytelling</h3><p>Hosts, analysts, and fans shaping the sports conversation together.</p></article>
+          <article class="reveal"><span>MP</span><h3>Multi-platform Coverage</h3><p>YouTube videos, Instagram reels, podcasts, and live-event coverage.</p></article>
+          <article class="reveal"><span>YT</span><h3>Youth-focused Content</h3><p>Built for fans who watch, post, roast, debate, and celebrate.</p></article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-title">Ready to talk sports, stories, or partnerships?</h2>
+          </div>
+          <a class="btn primary" href="mailto:hello@theballybaazi.com">Contact The Team</a>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card reveal">
+            <small>General Enquiries</small>
+            <a href="mailto:hello@theballybaazi.com">hello@theballybaazi.com</a>
+            <p>For collaborations, content ideas, fan messages, and brand questions.</p>
+          </article>
+          <article class="contact-card reveal">
+            <small>Partnerships</small>
+            <a href="mailto:partners@theballybaazi.com">partners@theballybaazi.com</a>
+            <p>For sponsorships, creator campaigns, match-day activations, and media deals.</p>
+          </article>
+          <article class="contact-card reveal">
+            <small>Call / WhatsApp</small>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <p>Available Monday to Saturday, 10 AM to 7 PM IST.</p>
+          </article>
+          <article class="contact-card reveal">
+            <small>Studio Base</small>
+            <strong>Mumbai, India</strong>
+            <p>Digital-first sports content studio serving fans across India and beyond.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <img src="public/images/cta-stadium.png" alt="Cheering sports crowd under stadium lights" />
+        <div></div>
+        <div class="final-copy reveal">
+          <p class="eyebrow">Join The Movement</p>
+          <h2>Join The Next Generation Of <span>Sports Entertainment</span></h2>
+          <div class="button-row center-row">
+            <a class="btn primary" href="#">Subscribe on YouTube</a>
+            <a class="btn ghost" href="#">Follow on Instagram</a>
+            <a class="btn ghost" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <a class="brand" href="#home">
+          <span class="brand-mark">TB</span>
+          <span><strong>The BallyBaazi</strong><small>Sports x Entertainment</small></span>
+        </a>
+        <p>Sports media, fan culture, analysis, reels, podcasts, and high-energy match-day storytelling.</p>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <strong>Follow The BallyBaazi</strong>
+        <div>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+        <p>hello@theballybaazi.com</p>
+      </div>
+    </footer>
+
+    <aside class="social-rail" aria-label="Social links">
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Community">CM</a>
+    </aside>
+
+    <nav class="phone-nav" aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#content">Content</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="chat-launcher" aria-label="Open AI sports chatbot">AI</button>
+    <aside class="chatbot" aria-hidden="true">
+      <strong>Baazi AI</strong>
+      <p>Ask for picks, recaps, or hot takes.</p>
+      <span>Try: "Give me a 60-second preview for tonight's chase."</span>
+    </aside>
+
+    <script src="assets/jquery-lite.js"></script>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
