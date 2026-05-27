@@ -21,6 +21,8 @@ html {
 
 body {
   margin: 0;
+  width: 100%;
+  min-width: 0;
   overflow-x: hidden;
   background:
     radial-gradient(circle at 12% 8%, rgba(0, 51, 141, 0.36), transparent 30rem),
@@ -55,6 +57,13 @@ button {
 img {
   max-width: 100%;
   display: block;
+}
+
+main,
+section,
+header,
+footer {
+  min-width: 0;
 }
 
 ::selection {
@@ -123,6 +132,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .brand strong {
@@ -133,6 +143,7 @@ img {
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .brand small {
@@ -142,6 +153,7 @@ img {
   font-weight: 900;
   letter-spacing: 0.23em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .brand-mark {
@@ -377,9 +389,9 @@ img {
 }
 
 .hero h1 {
-    max-width: 52rem;
-    font-size: 98px;
-    line-height: 1;
+  max-width: 52rem;
+  font-size: clamp(4rem, 14vw, 6.9rem);
+  line-height: 0.9;
 }
 
 .hero h1 span,
@@ -642,7 +654,7 @@ img {
 
 .section-title {
   max-width: 58rem;
-  font-size: 86px;
+  font-size: clamp(3rem, 8vw, 5.6rem);
   line-height: 0.9;
 }
 
@@ -1184,16 +1196,11 @@ body.light-mode .phone-nav {
   }
 
   .desktop-nav {
-    display: flex;
-  }
-
-  .menu-toggle {
     display: none;
   }
 
-  .hero-inner {
-    grid-template-columns: 1.08fr 0.92fr;
-    padding-inline: 2rem;
+  .menu-toggle {
+    display: grid;
   }
 
   .section {
@@ -1234,8 +1241,28 @@ body.light-mode .phone-nav {
   }
 
   .footer {
-    grid-template-columns: 1.2fr 0.8fr 1fr;
     padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .footer {
+    grid-template-columns: minmax(0, 1.2fr) minmax(10rem, 0.8fr) minmax(16rem, 1fr);
   }
 }
 
@@ -1254,7 +1281,100 @@ body.light-mode .phone-nav {
   }
 }
 
+@media (max-width: 899px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    min-height: auto;
+    padding-top: 8.75rem;
+  }
+
+  .hero-copy {
+    max-width: 42rem;
+  }
+
+  .section-head .btn {
+    align-self: flex-start;
+  }
+
+  .final-cta {
+    min-height: 36rem;
+  }
+}
+
 @media (max-width: 640px) {
+  .site-header {
+    height: 4.55rem;
+    padding-inline: 0.75rem;
+  }
+
+  .brand {
+    gap: 0.55rem;
+  }
+
+  .brand-mark {
+    height: 2.65rem;
+    width: 2.65rem;
+    font-size: 1.18rem;
+  }
+
+  .brand strong {
+    font-size: 1.34rem;
+  }
+
+  .brand small {
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
+  }
+
+  .icon-button {
+    height: 2.35rem;
+    width: 2.35rem;
+  }
+
+  .ticker {
+    top: 4.55rem;
+  }
+
+  .ticker-track span {
+    padding: 0.62rem 0.9rem;
+    font-size: 0.68rem;
+  }
+
+  .hero-inner {
+    gap: 2.2rem;
+    padding: 8.1rem 0.85rem 3.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.55rem, 18vw, 5.3rem);
+  }
+
+  .hero-line {
+    font-size: 1.08rem;
+    line-height: 1.5;
+  }
+
+  .eyebrow {
+    max-width: 100%;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+  }
+
+  .button-row {
+    gap: 0.65rem;
+  }
+
+  .btn {
+    min-height: 2.85rem;
+    padding: 0.78rem 1rem;
+    font-size: 0.72rem;
+  }
+
   .hero-dashboard {
     min-height: 29rem;
   }
@@ -1278,6 +1398,175 @@ body.light-mode .phone-nav {
 
   .metric-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 4.6rem 0.85rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.65rem, 13vw, 4.1rem);
+  }
+
+  .section-copy {
+    font-size: 0.95rem;
+  }
+
+  .media-panel {
+    min-height: 21rem;
+    border-radius: 1.15rem;
+  }
+
+  .media-panel div {
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    padding: 0.95rem;
+  }
+
+  .media-panel h2 {
+    font-size: 2.35rem;
+  }
+
+  .content-grid {
+    grid-auto-columns: minmax(16.5rem, 84vw);
+    margin-inline: -0.15rem;
+  }
+
+  .content-card {
+    min-height: 22rem;
+  }
+
+  .team-grid,
+  .why-grid,
+  .contact-grid {
+    gap: 0.85rem;
+  }
+
+  .team-card,
+  .why-grid article,
+  .contact-card {
+    padding: 1.1rem;
+  }
+
+  .team-card > div {
+    height: 6.5rem;
+    width: 6.5rem;
+    font-size: 2.35rem;
+  }
+
+  .contact-card a,
+  .contact-card strong {
+    font-size: 1.12rem;
+  }
+
+  .final-cta {
+    min-height: 33rem;
+    padding-inline: 0.85rem;
+  }
+
+  .final-copy h2 {
+    font-size: clamp(3.1rem, 15vw, 5rem);
+  }
+
+  .footer {
+    padding: 2.4rem 0.85rem 6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-dashboard {
+    display: grid;
+    gap: 0.85rem;
+    min-height: auto;
+  }
+
+  .score-card,
+  .float-a,
+  .float-b {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: 100%;
+    animation: none;
+  }
+
+  .bat-graphic {
+    display: none;
+  }
+
+  .hero-stats {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    gap: 0.65rem;
+  }
+
+  .hero-stats div {
+    padding: 0.85rem;
+  }
+
+  .button-row,
+  .center-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section-head .btn {
+    align-self: stretch;
+  }
+
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .tabs button {
+    min-width: 0;
+    padding-inline: 0.65rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand strong {
+    font-size: 1.12rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.05rem, 17vw, 3.8rem);
+  }
+
+  .section-title {
+    font-size: clamp(2.35rem, 12vw, 3.3rem);
+  }
+
+  .content-grid {
+    grid-auto-columns: minmax(15rem, 86vw);
+  }
+
+  .phone-nav {
+    inset-inline: 0.45rem;
+    bottom: 0.45rem;
+  }
+
+  .phone-nav a {
+    min-height: 2.35rem;
+    font-size: 0.58rem;
   }
 }
 
