@@ -390,7 +390,7 @@ footer {
 
 .hero h1 {
   max-width: 52rem;
-  font-size: clamp(4rem, 14vw, 6.9rem);
+  font-size: 98px;
   line-height: 0.9;
 }
 
@@ -654,7 +654,7 @@ footer {
 
 .section-title {
   max-width: 58rem;
-  font-size: clamp(3rem, 8vw, 5.6rem);
+  font-size: 76px;
   line-height: 0.9;
 }
 
@@ -1204,7 +1204,7 @@ body.light-mode .phone-nav {
   }
 
   .section {
-    padding: 7.5rem 2rem;
+    padding: 4.0rem 2rem;
   }
 
   .split,
@@ -1305,6 +1305,9 @@ body.light-mode .phone-nav {
 }
 
 @media (max-width: 640px) {
+  .hero h1 {
+    font-size: 68px !important;
+  }
   .site-header {
     height: 4.55rem;
     padding-inline: 0.75rem;
@@ -1532,6 +1535,9 @@ body.light-mode .phone-nav {
     min-width: 0;
     padding-inline: 0.65rem;
   }
+      .hero h1 {
+        font-size: 50px !important;
+    }
 }
 
 @media (max-width: 390px) {
